@@ -525,4 +525,4 @@ Take your `about.html` HTML page from the HTML course and style its parts using 
 
 ---
 
-[Next lesson: Box Model →](../3/en/Box%20Model.md)
+[Next lesson: Box Model →](Lesson-3/en/Box%20Model.md)

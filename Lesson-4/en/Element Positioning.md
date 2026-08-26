@@ -432,4 +432,4 @@ Check that when scrolling a long page, the header "sticks" to the top and remain
 
 ---
 
-[Next lesson: Flexbox Basics →](../5/en/Flexbox%20Basics.md)
+[Next lesson: Flexbox Basics →](Lesson-5/en/Flexbox%20Basics.md)

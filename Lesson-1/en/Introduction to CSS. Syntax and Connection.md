@@ -377,4 +377,4 @@ Connect an external CSS file to your HTML page from the HTML course and style:
 
 ---
 
-[Next lesson: Selectors and Cascade →](../2/en/Selectors%20and%20Cascade.md)
+[Next lesson: Selectors and Cascade →](Lesson-2/en/Selectors%20and%20Cascade.md)

@@ -376,4 +376,4 @@ O'zingizning HTML loyihangiz asosida ikkita klassik naqna yig'ing:
 
 ---
 
-[Keyingi dars: Flexbox — rivojlangan va Grid →](../6/uz/Flexbox%20—%20rivojlangan%20daraja%20va%20Grid.md)
+[Keyingi dars: Flexbox — rivojlangan va Grid →](Lesson-6/uz/Flexbox%20—%20rivojlangan%20daraja%20va%20Grid.md)

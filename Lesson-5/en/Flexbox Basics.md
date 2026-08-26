@@ -376,4 +376,4 @@ Build two classic patterns based on your own HTML project:
 
 ---
 
-[Next lesson: Flexbox Advanced and Grid →](../6/en/Flexbox%20Advanced%20and%20Grid.md)
+[Next lesson: Flexbox Advanced and Grid →](Lesson-6/en/Flexbox%20Advanced%20and%20Grid.md)

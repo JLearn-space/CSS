@@ -377,4 +377,4 @@ HTML kursidagi HTML sahifangizga tashqi CSS faylni ulang va ushlang:
 
 ---
 
-[Keyingi dars: Selektorlar va kaskad →](../2/uz/Selektorlar%20va%20kaskad.md)
+[Keyingi dars: Selektorlar va kaskad →](Lesson-2/uz/Selektorlar%20va%20kaskad.md)

@@ -525,4 +525,4 @@ HTML kursidagi `about.html` sahifangizni oling va uni klasslar orqali ushlang:
 
 ---
 
-[Keyingi dars: Box model →](../3/uz/Box%20model%20(blok%20modeli).md)
+[Keyingi dars: Box model (blok modeli) →](Lesson-3/uz/Box%20model%20(blok%20modeli).md)

@@ -438,4 +438,4 @@ Inside each `.project-card`, use Flexbox for vertical arrangement of content (im
 
 ---
 
-[Next lesson: Typography, Color, and Background →](../7/en/Typography,%20Color,%20and%20Background.md)
+[Next lesson: Typography, Color, and Background →](Lesson-7/en/Typography,%20Color,%20and%20Background.md)

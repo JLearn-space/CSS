@@ -431,4 +431,4 @@ Tekshiringki, uzoq sahifani aylantirishda sarlavha yuqoriga "yopishadi" va ko'ri
 
 ---
 
-[Keyingi dars: Flexbox — asoslar →](../5/uz/Flexbox%20—%20asoslar.md)
+[Keyingi dars: Flexbox — asoslar →](Lesson-5/uz/Flexbox%20—%20asoslar.md)

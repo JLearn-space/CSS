@@ -541,4 +541,4 @@ Bugun siz bilib oldingiz:
 
 ---
 
-[Keyingi dars: Yakuniy loyiha →](../10/uz/Yakuniy%20loyiha%20—%20to'liq%20stilizatsiya%20va%20nashr%20etish.md)
+[Keyingi dars: Yakuniy loyiha →](Lesson-10/uz/Yakuniy%20loyiha%20—%20to'liq%20stilizatsiya%20va%20nashr%20etish.md)

@@ -419,4 +419,4 @@ Ikkala blokni DevTools qurilma rejimida bir nechta turli ekran kengliklarida tek
 
 ---
 
-[Keyingi dars: O'tishlar, animatsiyalar →](../9/uz/O'tishlar,%20animatsiyalar,%20soxta-sinflar%20va%20soxta-elementlar.md)
+[Keyingi dars: O'tishlar, animatsiyalar →](Lesson-9/uz/O'tishlar,%20animatsiyalar,%20soxta-sinflar%20va%20soxta-elementlar.md)

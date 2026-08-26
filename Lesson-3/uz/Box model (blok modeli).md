@@ -450,4 +450,4 @@ HTML kursidagi sahifangiz asosida karta (rasim + matn + bo'shliqlar + ramka) yas
 
 ---
 
-[Keyingi dars: Elementlarni joylashtirish →](../4/uz/Elementlarni%20joylashtirish.md)
+[Keyingi dars: Elementlarni joylashtirish →](Lesson-4/uz/Elementlarni%20joylashtirish.md)

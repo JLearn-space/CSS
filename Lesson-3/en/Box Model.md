@@ -450,4 +450,4 @@ Build a card (image + text + spacing + border) based on your HTML page from the 
 
 ---
 
-[Next lesson: Element Positioning →](../4/en/Element%20Positioning.md)
+[Next lesson: Element Positioning →](Lesson-4/en/Element%20Positioning.md)

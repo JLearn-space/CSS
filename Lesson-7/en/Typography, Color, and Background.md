@@ -530,4 +530,4 @@ Style the heading and body text of an article based on your `about.html` page:
 
 ---
 
-[Next lesson: Responsive Design →](../8/en/Responsive%20Design.md)
+[Next lesson: Responsive Design →](Lesson-8/en/Responsive%20Design.md)

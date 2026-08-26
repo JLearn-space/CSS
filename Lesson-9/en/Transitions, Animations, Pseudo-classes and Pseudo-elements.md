@@ -541,4 +541,4 @@ Today you learned:
 
 ---
 
-[Next lesson: Final Project →](../10/en/Final%20Project%20—%20Complete%20Styling%20and%20Publishing.md)
+[Next lesson: Final Project →](Lesson-10/en/Final%20Project%20—%20Complete%20Styling%20and%20Publishing.md)

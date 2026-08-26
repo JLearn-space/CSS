@@ -530,4 +530,4 @@ O'z `about.html` sahifangiz asosida maqola sarlavhasi va matn abzacsini bezating
 
 ---
 
-[Keyingi dars: Moslashuvchan tiklash →](../8/uz/Moslashuvchan%20tiklash%20(Responsive%20Design).md)
+[Keyingi dars: Moslashuvchan tiklash →](Lesson-8/uz/Moslashuvchan%20tiklash%20(Responsive%20Design).md)

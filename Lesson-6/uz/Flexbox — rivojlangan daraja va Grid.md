@@ -438,4 +438,4 @@ Har bir `.project-card` ichida kontentning vertikal joylashuvi (rasm, sarlavha, 
 
 ---
 
-[Keyingi dars: Tipografiya, rang, fon →](../7/uz/Tipografiya,%20rang,%20fon.md)
+[Keyingi dars: Tipografiya, rang, fon →](Lesson-7/uz/Tipografiya,%20rang,%20fon.md)

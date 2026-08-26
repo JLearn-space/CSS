@@ -419,4 +419,4 @@ Check both blocks using device mode in DevTools at several different screen widt
 
 ---
 
-[Next lesson: Transitions, Animations →](../9/en/Transitions,%20Animations,%20Pseudo-classes%20and%20Pseudo-elements.md)
+[Next lesson: Transitions, Animations →](Lesson-9/en/Transitions,%20Animations,%20Pseudo-classes%20and%20Pseudo-elements.md)
