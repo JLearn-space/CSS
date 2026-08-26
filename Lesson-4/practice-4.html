@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 4 — Практика: Позиционирование</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <h1>Урок 4 — Позиционирование элементов</h1>
+    </header>
+
+    <main>
+        <!-- Секция 1: Position Relative -->
+        <section>
+            <h2>1. Position: Relative</h2>
+            <p>Элемент со смещением относительного своего обычного положения:</p>
+            <div class="box-relative">
+                Я сместился на 20px вправо и на 30px вниз
+            </div>
+        </section>
+
+        <!-- Секция 2: Position Absolute + Relative -->
+        <section>
+            <h2>2. Position: Absolute (бейдж на карточке)</h2>
+            <div class="card">
+                <span class="badge">SALE</span>
+                <div class="card-title">Товар со скидкой</div>
+                <div class="card-price">Цена: 1 990 ₽</div>
+                <div class="card-desc">Красивая карточка с абсолютным бейджем</div>
+            </div>
+        </section>
+
+        <!-- Секция 3: Position Fixed -->
+        <section>
+            <h2>3. Position: Fixed (кнопка «Наверх»)</h2>
+            <p>Кнопка фиксирована в правом нижнем углу экрана. Прокрутите страницу вниз, чтобы увидеть.</p>
+            <div style="height: 600px; background: #f0f0f0; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #888;">
+                Прокрутите страницу вниз ↓
+            </div>
+        </section>
+
+        <!-- Секция 4: Position Sticky -->
+        <section>
+            <h2>4. Position: Sticky (залипающая шапка)</h2>
+            <p>Заголовок залипает при прокрутке:</p>
+            <div class="sticky-demo">
+                <div class="sticky-box">Я залипаю при прокрутке!</div>
+                <div class="content-block">Контент блока 1</div>
+                <div class="content-block">Контент блока 2</div>
+                <div class="content-block">Контент блока 3</div>
+                <div class="content-block">Контент блока 4</div>
+                <div class="content-block">Контент блока 5</div>
+            </div>
+        </section>
+
+        <!-- Секция 5: Z-Index -->
+        <section>
+            <h2>5. Z-Index (наложение слоёв)</h2>
+            <div class="zindex-container">
+                <div class="z-box z-box-1">Z-index: 1</div>
+                <div class="z-box z-box-2">Z-index: 2</div>
+                <div class="z-box z-box-3">Z-index: 3</div>
+            </div>
+        </section>
+
+        <!-- Секция 6: Карточка товара с бейджем -->
+        <section>
+            <h2>6. Карточка товара с бейджем «Скидка»</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="product-badge">-30%</span>
+                    <div class="product-name">Наушники</div>
+                    <div class="product-price">3 500 ₽</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-badge new-badge">Новинка</span>
+                    <div class="product-name">Клавиатура</div>
+                    <div class="product-price">5 200 ₽</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Мышь</div>
+                    <div class="product-price">1 800 ₽</div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 200px;"></div>
+    </main>
+
+    <a href="#" class="back-to-top">↑ Наверх</a>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aziz — Контакты</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">Aziz</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">Обо мне</a></li>
+          <li><a href="projects.html">Проекты</a></li>
+          <li><a href="contact.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Контакты</h1>
+        <p>Свяжитесь со мной для сотрудничества</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Напишите мне</h2>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="#" method="post">
+          <fieldset>
+            <legend>Ваше сообщение</legend>
+
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Тема</label>
+              <input type="text" id="subject" name="subject" placeholder="Тема сообщения" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" placeholder="Ваше сообщение..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </fieldset>
+        </form>
+
+        <!-- Contact Info Table -->
+        <h2 class="section-title">Контактная информация</h2>
+
+        <div class="contact-table">
+          <table>
+            <caption>Способы связи со мной</caption>
+            <thead>
+              <tr>
+                <th scope="col">Тип</th>
+                <th scope="col">Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Email</th>
+                <td><a href="mailto:aziz@example.com">aziz@example.com</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Телефон</th>
+                <td><a href="tel:+998901234567">+998 90 123 45 67</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Город</th>
+                <td>Ташкент, Узбекистан</td>
+              </tr>
+              <tr>
+                <th scope="row">GitHub</th>
+                <td><a href="#">github.com/aziz</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aziz. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

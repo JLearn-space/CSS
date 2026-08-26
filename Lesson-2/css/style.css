@@ -1,0 +1,152 @@
+/*
+ * Внешний CSS-файл — Урок 2: Селекторы и каскад
+ * Демонстрация различных типов CSS-селекторов и их специфичности.
+ */
+
+/* ===== Универсальный селектор (сброс) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Теговые селекторы ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* ===== Классовые селекторы ===== */
+.highlight {
+  background-color: #fff3cd;
+  padding: 0.5rem;
+  border-left: 4px solid #ffc107;
+}
+
+.large-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ===== ID-селектор ===== */
+#special-box {
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+/* ===== Комбинаторы ===== */
+
+/* Дочерний селектор — только прямые потомки nav */
+nav > ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+nav > ul > li {
+  padding: 0.3rem 0;
+}
+
+/* Соседний селектор — h2 + p */
+h2 + p {
+  color: #e74c3c;
+  font-style: italic;
+}
+
+/* Общий sibling — h3 ~ p */
+.sibling-demo h3 ~ p {
+  color: #8e44ad;
+  margin-left: 1rem;
+}
+
+/* ===== Атрибутные селекторы ===== */
+input[type="text"] {
+  background-color: #e8f4fd;
+  border: 2px solid #3498db;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+}
+
+input[type="password"] {
+  border: 2px solid #e74c3c;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+}
+
+input[type="email"] {
+  border: 2px solid #28a745;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+a[href^="https"] {
+  color: #28a745;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a[href^="http"] {
+  color: #e67e22;
+}
+
+a[href^="mailto"] {
+  color: #8e44ad;
+  font-style: italic;
+}
+
+/* ===== Специфичность ===== */
+.specificity-demo {
+  background-color: #fff3cd;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-left: 4px solid #ffc107;
+}
+
+#specificity-top {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+  font-weight: bold;
+}

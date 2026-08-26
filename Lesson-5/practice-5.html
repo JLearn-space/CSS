@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 5 — Практика: Flexbox основы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Урок 5 — Flexbox основы</h1>
+
+        <!-- Секция 1: Display Flex -->
+        <section>
+            <h2>1. display: flex — контейнер и элементы</h2>
+            <div class="flex-container">
+                <div class="flex-item">Элемент 1</div>
+                <div class="flex-item">Элемент 2</div>
+                <div class="flex-item">Элемент 3</div>
+            </div>
+        </section>
+
+        <!-- Секция 2: Flex Direction -->
+        <section>
+            <h2>2. flex-direction</h2>
+
+            <h3>row (по умолчанию)</h3>
+            <div class="flex-container direction-row">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>column</h3>
+            <div class="flex-container direction-column">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>row-reverse</h3>
+            <div class="flex-container direction-row-reverse">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+        </section>
+
+        <!-- Секция 3: Justify-Content -->
+        <section>
+            <h2>3. justify-content</h2>
+
+            <h3>flex-start</h3>
+            <div class="flex-container justify-start">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>flex-end</h3>
+            <div class="flex-container justify-end">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>center</h3>
+            <div class="flex-container justify-center">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>space-between</h3>
+            <div class="flex-container justify-between">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>space-around</h3>
+            <div class="flex-container justify-around">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+
+            <h3>space-evenly</h3>
+            <div class="flex-container justify-evenly">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+        </section>
+
+        <!-- Секция 4: Align-Items -->
+        <section>
+            <h2>4. align-items</h2>
+
+            <h3>stretch (по умолчанию)</h3>
+            <div class="flex-container align-stretch">
+                <div class="flex-item">Короткий</div>
+                <div class="flex-item">Средний текст</div>
+                <div class="flex-item">Очень длинный текст для наглядности</div>
+            </div>
+
+            <h3>flex-start</h3>
+            <div class="flex-container align-start">
+                <div class="flex-item">Короткий</div>
+                <div class="flex-item">Средний текст</div>
+                <div class="flex-item">Очень длинный текст</div>
+            </div>
+
+            <h3>flex-end</h3>
+            <div class="flex-container align-end">
+                <div class="flex-item">Короткий</div>
+                <div class="flex-item">Средний текст</div>
+                <div class="flex-item">Очень длинный текст</div>
+            </div>
+
+            <h3>center</h3>
+            <div class="flex-container align-center">
+                <div class="flex-item">Короткий</div>
+                <div class="flex-item">Средний текст</div>
+                <div class="flex-item">Очень длинный текст</div>
+            </div>
+        </section>
+
+        <!-- Секция 5: Perfect Centering -->
+        <section>
+            <h2>5. Идеальное центрирование</h2>
+            <div class="center-box">
+                <div class="center-content">Я по центру!</div>
+            </div>
+        </section>
+
+        <!-- Секция 6: Flex Wrap -->
+        <section>
+            <h2>6. flex-wrap: wrap и gap</h2>
+            <div class="card-grid">
+                <div class="card-grid-item">Карточка 1</div>
+                <div class="card-grid-item">Карточка 2</div>
+                <div class="card-grid-item">Карточка 3</div>
+                <div class="card-grid-item">Карточка 4</div>
+                <div class="card-grid-item">Карточка 5</div>
+                <div class="card-grid-item">Карточка 6</div>
+                <div class="card-grid-item">Карточка 7</div>
+                <div class="card-grid-item">Карточка 8</div>
+            </div>
+        </section>
+
+        <!-- Секция 7: Навигация на Flexbox -->
+        <section>
+            <h2>7. Навигационное меню (Flexbox)</h2>
+            <nav class="nav-bar">
+                <div class="nav-logo">Мой сайт</div>
+                <ul class="nav-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="nav-button">Войти</div>
+            </nav>
+        </section>
+    </main>
+
+</body>
+</html>

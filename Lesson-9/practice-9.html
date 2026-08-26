@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 9 — Практика: Псевдоклассы, анимации</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <section class="demo">
+            <h2>Псевдоклассы на кнопках</h2>
+            <p>Наведите курсор, нажмите и удерживайте кнопку, чтобы увидеть состояния :hover, :focus и :active.</p>
+            <div class="button-group">
+                <button class="btn">Основная кнопка</button>
+                <button class="btn btn--secondary">Вторичная кнопка</button>
+                <button class="btn btn--danger">Удалить</button>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>Состояние :focus на полях ввода</h2>
+            <p>Нажмите на поле ввода, чтобы увидеть кастомный контур через box-shadow вместо стандартного outline.</p>
+            <form class="form">
+                <label class="form__label" for="name">Имя пользователя</label>
+                <input class="form__input" type="text" id="name" placeholder="Введите ваше имя">
+                <label class="form__label" for="email">Электронная почта</label>
+                <input class="form__input" type="email" id="email" placeholder="example@mail.ru">
+            </form>
+        </section>
+
+        <section class="demo">
+            <h2>Полосатый список (:nth-child)</h2>
+            <p>Элементы списка окрашены чередующимися цветами с помощью :nth-child(odd) и :nth-child(even).</p>
+            <ol class="zebra-list">
+                <li>Первый элемент — чётная полоса</li>
+                <li>Второй элемент — нечётная полоса</li>
+                <li>Третий элемент — чётная полоса</li>
+                <li>Четвёртый элемент — нечётная полоса</li>
+                <li>Пятый элемент — чётная полоса</li>
+                <li>Шестой элемент — нечётная полоса</li>
+                <li>Седьмой элемент — чётная полоса</li>
+                <li>Восьмой элемент — нечётная полоса</li>
+            </ol>
+        </section>
+
+        <section class="demo">
+            <h2>Псевдоэлементы ::before и ::after</h2>
+            <blockquote class="quote">
+                Код — это поэзия, и каждая строка должна иметь смысл.
+            </blockquote>
+            <p>Внешние ссылки с индикатором стрелки через ::after:</p>
+            <p>
+                <a class="external-link" href="https://developer.mozilla.org/ru/" target="_blank" rel="noopener noreferrer">Документация MDN</a>
+            </p>
+            <p>
+                <a class="external-link" href="https://css-tricks.com" target="_blank" rel="noopener noreferrer">CSS-Tricks</a>
+            </p>
+        </section>
+
+        <section class="demo">
+            <h2>Анимации</h2>
+            <p>Кнопка ниже использует transition для плавного изменения при наведении:</p>
+            <button class="btn btn--animated">Наведите на меня</button>
+
+            <p>Блок с анимацией fadeIn (появление при загрузке):</p>
+            <div class="fade-box">Я плавно появился!</div>
+
+            <p>Пульсирующий элемент с бесконечной анимацией:</p>
+            <div class="pulse-box"></div>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,568 @@
+/* ========================================
+   CSS Course Final Project - Style Sheet
+   ======================================== */
+
+/* Reset (Lesson 1, 3, 10) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Custom Properties (Lesson 10) */
+:root {
+  --color-primary: hsl(210, 70%, 50%);
+  --color-primary-dark: hsl(210, 70%, 40%);
+  --color-text: #2c3e50;
+  --color-bg: #f9f9f9;
+  --color-border: #e0e0e0;
+  --color-white: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-footer-bg: hsl(210, 30%, 25%);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.15);
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+/* Typography (Lesson 7) */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;  /* Transition (Lesson 9) */
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout utilities */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ========================================
+   Header (Lesson 5 - Flexbox, Lesson 4 - Sticky)
+   ======================================== */
+.site-header {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.site-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Selectors - descendant (Lesson 2) */
+.nav-links a {
+  color: var(--color-text);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, color 0.3s ease;  /* Transition (Lesson 9) */
+}
+
+.nav-links a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Pseudo-class :focus (Lesson 9) */
+.nav-links a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.nav-links a[aria-current="page"] {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+/* ========================================
+   Hero Section (Lesson 7 - Backgrounds)
+   ======================================== */
+.hero {
+  background: linear-gradient(135deg, hsl(210, 70%, 50%), hsl(210, 50%, 35%));
+  color: var(--color-white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/* Button with transitions & pseudo-classes (Lesson 9) */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* ========================================
+   Sections & Titles
+   ======================================== */
+.section {
+  padding: 3rem 0;
+}
+
+/* Pseudo-element ::after (Lesson 9) */
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+}
+
+/* ========================================
+   Cards Grid (Lesson 6 - Grid)
+   ======================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Box model (Lesson 3) */
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;  /* Transition (Lesson 9) */
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.card figure {
+  margin-bottom: 1rem;
+}
+
+.card figcaption {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card .tag {
+  display: inline-block;
+  background-color: hsl(210, 70%, 95%);
+  color: var(--color-primary);
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+}
+
+/* Code element (Lesson 7 typography) */
+.card code {
+  background-color: #f0f0f0;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: hsl(210, 70%, 40%);
+}
+
+/* ========================================
+   About Page
+   ======================================== */
+.about-content {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.about-content h2 {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content h3 {
+  color: var(--color-primary-dark);
+  margin-top: 1.5rem;
+}
+
+/* Grouped selectors (Lesson 2) */
+.skills-list,
+.tools-list {
+  margin-bottom: 1.5rem;
+}
+
+.skills-list li,
+.tools-list li {
+  padding: 0.3rem 0;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+
+em {
+  font-style: italic;
+  color: #555;
+}
+
+/* ========================================
+   Projects Page
+   ======================================== */
+.project-card .project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.project-card .project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ========================================
+   Contact Page
+   ======================================== */
+/* Form styling with box model (Lesson 3) */
+.contact-form {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+/* Fieldset & legend (accessibility) */
+.contact-form fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  color: var(--color-primary);
+  padding: 0 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+/* Input styling with pseudo-class :focus (Lesson 9) */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px hsla(210, 70%, 50%, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Table styling (Lesson 3 box model) */
+.contact-table {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.contact-table caption {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  padding: 1rem;
+  text-align: left;
+  background-color: hsl(210, 70%, 96%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-table th {
+  background-color: hsl(210, 70%, 96%);
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-table a {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.contact-table a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.site-footer {
+  background-color: var(--color-footer-bg);
+  color: hsl(0, 0%, 85%);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: hsl(0, 0%, 100%);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   Responsive Design (Lesson 8)
+   Base: mobile-first (column nav, 1 col grid)
+   ======================================== */
+
+/* Tablet: min-width 768px */
+@media (min-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+/* Desktop: min-width 1024px */
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 6rem 0;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .about-content {
+    padding: 3rem;
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+}

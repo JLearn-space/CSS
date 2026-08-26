@@ -1,0 +1,157 @@
+/* =============================================
+   Урок 8 — Адаптивная вёрстка
+   ============================================= */
+
+/* ---- Базовый размер шрифта ---- */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Header и навигация (mobile-first: колонка) ---- */
+
+.header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__title {
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav__link {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---- Контейнер ---- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+/* ---- Сетка карточек (1 колонка по умолчанию) ---- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card__body {
+    padding: 1.25rem;
+}
+
+.card__title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.card__text {
+    margin: 0 0 1rem 0;
+    color: #555555;
+}
+
+.card__tag {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+/* =============================================
+   Медиа-запросы (mobile-first)
+   ============================================= */
+
+/* Планшет: 600px+ — сетка 2 колонки, горизонтальная навигация */
+
+@media (min-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Десктоп: 1024px+ — сетка 3 колонки */
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header {
+        padding: 1.25rem 2rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+}

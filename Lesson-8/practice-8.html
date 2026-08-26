@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 8 — Практика: Адаптивная вёрстка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__title">Адаптивная вёрстка</h1>
+            <nav class="nav">
+                <a href="#about" class="nav__link">О проекте</a>
+                <a href="#cards" class="nav__link">Карточки</a>
+                <a href="#info" class="nav__link">Информация</a>
+                <a href="#contact" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="about" class="section">
+            <h2>О проекте</h2>
+            <p>Эта страница демонстрирует адаптивную вёрстку с использованием CSS Grid и Flexbox. Откройте её в браузере и изменяйте ширину окна, чтобы увидеть, как макет подстраивается под разные размеры экрана.</p>
+        </section>
+
+        <section id="cards" class="section">
+            <h2>Карточки товаров</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">Основы HTML</h3>
+                        <p class="card__text">Изучите структуру веб-страниц, теги и атрибуты. Создайте свой первый сайт с нуля.</p>
+                        <span class="card__tag">Начальный уровень</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">Стили CSS</h3>
+                        <p class="card__text">Научитесь оформлять страницы: цвета, шрифты, отступы, позиционирование и многое другое.</p>
+                        <span class="card__tag">Начальный уровень</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">Адаптивный дизайн</h3>
+                        <p class="card__text">Создавайте страницы, которые отлично выглядят на любом устройстве — от смартфона до десктопа.</p>
+                        <span class="card__tag">Средний уровень</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">CSS Grid</h3>
+                        <p class="card__text">Мощная система компоновки для создания сложных двумерных макетов с минимальным кодом.</p>
+                        <span class="card__tag">Средний уровень</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">Flexbox</h3>
+                        <p class="card__text">Гибкая компоновка элементов в одном направлении. Идеально для навигации и карточек.</p>
+                        <span class="card__tag">Средний уровень</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">Медиа-запросы</h3>
+                        <p class="card__text">Применяйте стили в зависимости от ширины экрана для создания адаптивных интерфейсов.</p>
+                        <span class="card__tag">Продвинутый уровень</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="section">
+            <h2>Информация</h2>
+            <p>Используйте mobile-first подход: начинайте стили для мобильных устройств, затем добавляйте медиа-запросы для планшетов и десктопов.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Урок 8 — Адаптивная вёрстка &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

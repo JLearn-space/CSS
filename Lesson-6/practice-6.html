@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 6 — Практика: Flexbox и Grid</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Урок 6 — Flexbox продвинутый + CSS Grid</h1>
+
+        <!-- Секция 1: Flex Grow -->
+        <section>
+            <h2>1. flex-grow</h2>
+            <div class="flex-container grow-demo">
+                <div class="grow-item grow-1">flex-grow: 1</div>
+                <div class="grow-item grow-2">flex-grow: 2</div>
+                <div class="grow-item grow-3">flex-grow: 3</div>
+            </div>
+            <div class="flex-container grow-demo">
+                <div class="grow-item grow-1">1</div>
+                <div class="grow-item">0 (базовый)</div>
+                <div class="grow-item grow-2">2</div>
+            </div>
+        </section>
+
+        <!-- Секция 2: Flex Shrink -->
+        <section>
+            <h2>2. flex-shrink</h2>
+            <div class="flex-container shrink-demo">
+                <div class="shrink-item shrink-0">shrink: 0</div>
+                <div class="shrink-item shrink-1">shrink: 1</div>
+                <div class="shrink-item shrink-2">shrink: 2</div>
+            </div>
+            <p style="margin-top: 10px; color: #888; font-size: 0.9rem;">
+                Элемент с shrink: 0 сжимается меньше всех, а shrink: 2 — сжимается больше.
+            </p>
+        </section>
+
+        <!-- Секция 3: Flex Basis и Flex Shorthand -->
+        <section>
+            <h2>3. flex-basis и flex shorthand</h2>
+            <div class="flex-container basis-demo">
+                <div class="basis-item basis-200">basis: 200px</div>
+                <div class="basis-item basis-auto">basis: auto</div>
+                <div class="basis-item basis-100">basis: 100px</div>
+            </div>
+
+            <h3>flex shorthand (grow shrink basis)</h3>
+            <div class="flex-container shorthand-demo">
+                <div class="shorthand-item shorthand-1">flex: 1</div>
+                <div class="shorthand-item shorthand-2">flex: 2</div>
+                <div class="shorthand-item shorthand-3">flex: 1 0 150px</div>
+            </div>
+        </section>
+
+        <!-- Секция 4: Align Self -->
+        <section>
+            <h2>4. align-self</h2>
+            <div class="flex-container alignSelf-demo">
+                <div class="self-item self-start">align-self: flex-start</div>
+                <div class="self-item self-center">align-self: center</div>
+                <div class="self-item self-end">align-self: flex-end</div>
+                <div class="self-item self-stretch">align-self: stretch</div>
+            </div>
+        </section>
+
+        <!-- Секция 5: Order -->
+        <section>
+            <h2>5. order (перестановка элементов)</h2>
+            <div class="flex-container order-demo">
+                <div class="order-item order-3">order: 3 (первая)</div>
+                <div class="order-item order-1">order: 1 (вторая)</div>
+                <div class="order-item order-default">без order</div>
+                <div class="order-item order-2">order: 2 (четвёртая)</div>
+            </div>
+        </section>
+
+        <!-- Секция 6: CSS Grid — Repeat и fr -->
+        <section>
+            <h2>6. CSS Grid — grid-template-columns, repeat(), fr</h2>
+            <div class="grid-gallery">
+                <div class="gallery-item">Галерея 1</div>
+                <div class="gallery-item">Галерея 2</div>
+                <div class="gallery-item">Галерея 3</div>
+                <div class="gallery-item">Галерея 4</div>
+                <div class="gallery-item">Галерея 5</div>
+                <div class="gallery-item">Галерея 6</div>
+            </div>
+        </section>
+
+        <!-- Секция 7: Grid Gap -->
+        <section>
+            <h2>7. Grid gap и row-gap / column-gap</h2>
+            <div class="grid-gap-demo">
+                <div class="gap-item">1</div>
+                <div class="gap-item">2</div>
+                <div class="gap-item">3</div>
+                <div class="gap-item">4</div>
+                <div class="gap-item">5</div>
+                <div class="gap-item">6</div>
+            </div>
+        </section>
+
+        <!-- Секция 8: Grid Layout с fr -->
+        <section>
+            <h2>8. Grid layout с fr — пропорции колонок</h2>
+            <div class="grid-layout-demo">
+                <div class="layout-item layout-sidebar">Сайдбар (1fr)</div>
+                <div class="layout-item layout-main">Основной контент (3fr)</div>
+            </div>
+            <div class="grid-three-demo">
+                <div class="layout-item">2fr</div>
+                <div class="layout-item">1fr</div>
+                <div class="layout-item">1fr</div>
+            </div>
+        </section>
+
+        <!-- Секция 9: Комбинированная верстка — Grid + Flexbox -->
+        <section>
+            <h2>9. Комбинированная верстка: Grid (страница) + Flexbox (сайдбар)</h2>
+            <div class="page-layout">
+                <header class="page-header">
+                    <h3>Шапка сайта</h3>
+                </header>
+                <aside class="page-sidebar">
+                    <h4>Сайдбар</h4>
+                    <ul class="sidebar-list">
+                        <li>Пункт меню 1</li>
+                        <li>Пункт меню 2</li>
+                        <li>Пункт меню 3</li>
+                        <li>Пункт меню 4</li>
+                    </ul>
+                </aside>
+                <article class="page-content">
+                    <h3>Основной контент</h3>
+                    <p>Эта секция использует CSS Grid для раскладки страницы, а внутри сайдбара элементы выровнены с помощью Flexbox.</p>
+                    <div class="content-cards">
+                        <div class="content-card">Карточка 1</div>
+                        <div class="content-card">Карточка 2</div>
+                        <div class="content-card">Карточка 3</div>
+                    </div>
+                </article>
+                <footer class="page-footer">
+                    <p>Подвал сайта</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

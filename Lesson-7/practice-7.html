@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 7 — Практика: Типографика, цвет, фон</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Типографика, цвет и фон</h1>
+        <p>Практическое задание к уроку 7</p>
+    </header>
+
+    <main class="container">
+
+        <section class="demo">
+            <h2>Шрифты и типографика</h2>
+            <p class="font-stack">Этот текст использует стек шрифтов: Arial, sans-serif.</p>
+            <p class="size-px">Размер 20px — указан в пикселях.</p>
+            <p class="size-em">Размер 1.25em — указан в относительных единицах em.</p>
+            <p class="size-rem">Размер 1.25rem — указан в относительных единицах rem.</p>
+            <p class="weight-normal">font-weight: normal — обычный вес шрифта.</p>
+            <p class="weight-bold">font-weight: bold — полужирный текст.</p>
+            <p class="weight-700">font-weight: 700 — жирность задана числом.</p>
+        </section>
+
+        <section class="demo">
+            <h2>Межстрочный интервал</h2>
+            <p class="line-tight">Этот абзац имеет line-height: 1.0. Текст плотный и компактный. Между строк几乎没有 пространства, что делает чтение сложным при длинных предложениях и больших объёмах текста на странице.</p>
+            <p class="line-relaxed">Этот абзац имеет line-height: 1.6. Текст расслабленный и удобный для чтения. Между строк достаточно пространства, глаза легко переходят с одной строки на следующую. Это рекомендуемое значение для основного текста на веб-страницах.</p>
+        </section>
+
+        <section class="demo">
+            <h2 class="tracking">Межбуквенное расстояние</h2>
+            <p>Заголовок выше использует letter-spacing: 0.3em для визуального выделения.</p>
+        </section>
+
+        <section class="demo">
+            <h2>Форматы цвета</h2>
+            <div class="color-swatches">
+                <div class="swatch hex">HEX: #2c3e50</div>
+                <div class="swatch rgb">RGB: rgb(52, 152, 219)</div>
+                <div class="swatch rgba">RGBA: rgba(46, 204, 113, 0.7)</div>
+                <div class="swatch hsl">HSL: hsl(0, 80%, 55%)</div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>Фоновые свойства</h2>
+            <div class="bg-demo">
+                <p>Этот блок имеет фоновый градиент, background-size: cover и background-position: center.</p>
+            </div>
+            <div class="bg-repeat-demo">
+                <p>Этот блок демонстрирует background-repeat: repeat с повторяющимся градиентным паттерном.</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

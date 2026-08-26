@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 3 — Практика: Box Model</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Урок 3: Box Model</h1>
+  <p>Эта страница демонстрирует основные свойства box model в CSS.</p>
+
+  <!-- Простые блоки -->
+  <h2>Простые блоки</h2>
+
+  <div class="box box-basic">
+    Простой блок. Базовый размер, без отступов и рамок.
+  </div>
+
+  <div class="box box-padding">
+    Блок с padding. Внутренний отступ создаёт пространство между содержимым и рамкой.
+  </div>
+
+  <div class="box box-border">
+    Блок с border. Рамка обрамляет содержимое и padding.
+  </div>
+
+  <div class="box box-margin">
+    Блок с margin. Внешний отступ отделяет блок от соседних элементов.
+  </div>
+
+  <div class="box box-full">
+    Блок со всеми свойствами: padding, border и margin.
+  </div>
+
+  <!-- Border-radius -->
+  <h2>Border-radius</h2>
+
+  <div class="box box-rounded-small">Скругление 8px</div>
+  <div class="box box-rounded-medium">Скругление 16px</div>
+  <div class="box box-rounded-full">Скругление 50% (полный круг)</div>
+
+  <!-- box-sizing -->
+  <h2>box-sizing: border-box vs content-box</h2>
+  <p>Оба блока имеют <code>width: 300px</code> и <code>padding: 20px</code>. Разница в box-sizing:</p>
+
+  <div class="sizing-demo">
+    <div class="box box-content-box">
+      <strong>content-box</strong> (по умолчанию)<br>
+      Итоговая ширина: 300px + 40px padding + 20px border = <strong>360px</strong>
+    </div>
+    <div class="box box-border-box">
+      <strong>border-box</strong><br>
+      Итоговая ширина: <strong>300px</strong> (padding и border включены)
+    </div>
+  </div>
+
+  <!-- Центрирование -->
+  <h2>margin: 0 auto — Центрирование блока</h2>
+  <div class="box box-centered">
+    Этот блок центрирован с помощью margin: 0 auto.
+  </div>
+
+  <!-- display: block, inline, inline-block -->
+  <h2>display: block, inline, inline-block</h2>
+
+  <h3>block — каждый элемент на новой строке</h3>
+  <div class="display-block-demo">
+    <div class="block-elem">Block 1</div>
+    <div class="block-elem">Block 2</div>
+    <div class="block-elem">Block 3</div>
+  </div>
+
+  <h3>inline — элементы в одну строку, ширина/высота не задаются</h3>
+  <div class="display-inline-demo">
+    <span class="inline-elem">Inline 1</span>
+    <span class="inline-elem">Inline 2</span>
+    <span class="inline-elem">Inline 3</span>
+  </div>
+
+  <h3>inline-block — в одну строку, но с задаваемой шириной/высотой</h3>
+  <div class="display-inline-block-demo">
+    <span class="inline-block-elem">IBlock 1</span>
+    <span class="inline-block-elem">IBlock 2</span>
+    <span class="inline-block-elem">IBlock 3</span>
+  </div>
+
+  <!-- Компонент .card -->
+  <h2>Компонент «Карточка»</h2>
+  <p>Карточка объединяет все свойства box model: content, padding, border и border-radius.</p>
+
+  <div class="card">
+    <div class="card-title">Заголовок карточки</div>
+    <div class="card-body">
+      Это карточка, демонстрирующая комбинацию свойств box model: padding для внутренних отступов, border для рамки, border-radius для скругления и margin для внешних отступов.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Вторая карточка</div>
+    <div class="card-body">
+      Карточки расположены друг под другом thanks to margin между ними.
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* =============================================
+   Урок 9 — Псевдоклассы, псевдоэлементы,
+   transition, animation
+   ============================================= */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.demo {
+    margin-bottom: 2.5rem;
+}
+
+.demo h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =============================================
+   Кнопки: :hover, :focus, :active
+   Порядок LVHA: link, visited, hover, active
+   ============================================= */
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.btn--secondary {
+    background-color: #95a5a6;
+}
+
+.btn--danger {
+    background-color: #e74c3c;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn--secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn--danger:hover {
+    background-color: #c0392b;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+.btn--danger:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* =============================================
+   Кастомный :focus для полей ввода
+   ============================================= */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__label {
+    font-weight: bold;
+}
+
+.form__input {
+    padding: 0.6rem 0.75rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form__input:hover {
+    border-color: #95a5a6;
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.35);
+}
+
+/* =============================================
+   Полосатый список: :nth-child
+   ============================================= */
+
+.zebra-list {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: zebra;
+}
+
+.zebra-list li {
+    padding: 0.65rem 1rem;
+}
+
+.zebra-list li:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+.zebra-list li:nth-child(even) {
+    background-color: #d5dbdb;
+}
+
+/* =============================================
+   Псевдоэлементы ::before / ::after
+   ============================================= */
+
+.quote {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.quote::before {
+    content: "\201C";
+    position: absolute;
+    left: 0.4rem;
+    top: -0.2rem;
+    font-size: 3rem;
+    color: #3498db;
+    font-style: normal;
+    line-height: 1;
+}
+
+.quote::after {
+    content: "\201D";
+    position: absolute;
+    right: 0.8rem;
+    bottom: -0.4rem;
+    font-size: 3rem;
+    color: #3498db;
+    font-style: normal;
+    line-height: 1;
+}
+
+.external-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.external-link::after {
+    content: " \2197";
+    font-size: 0.85em;
+}
+
+.external-link:hover {
+    text-decoration: underline;
+}
+
+/* =============================================
+   Transition на кнопке
+   ============================================= */
+
+.btn--animated {
+    background-color: #2ecc71;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn--animated:hover {
+    background-color: #27ae60;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.4);
+}
+
+.btn--animated:focus {
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
+}
+
+.btn--animated:active {
+    transform: scale(0.95);
+}
+
+/* =============================================
+   @keyframes animation
+   ============================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-box {
+    background-color: #8e44ad;
+    color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 12px rgba(231, 76, 60, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+.pulse-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    margin: 1rem auto;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* =============================================
+   prefers-reduced-motion
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

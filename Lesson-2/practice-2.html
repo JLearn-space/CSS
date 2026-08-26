@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 2 — Практика: Селекторы и каскад</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Внутренние стили для демонстрации каскада */
+    p {
+      font-size: 1.05rem;
+    }
+
+    #main-title {
+      font-size: 2.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-title">Урок 2: Селекторы и каскад</h1>
+
+  <p>Эта страница демонстрирует различные типы CSS-селекторов.</p>
+
+  <!-- Теговый селектор -->
+  <h2>Теговый селектор</h2>
+  <p>Стилизуется через имя тега — <code>p</code>, <code>h1</code>, <code>h2</code>.</p>
+  <p>Каждый параграф на странице получает общие стили, заданные теговым селектором.</p>
+
+  <!-- Классовые селекторы -->
+  <h2>Классовые селекторы</h2>
+  <p class="highlight">Этот параграф имеет класс .highlight — он выделен жёлтым фоном.</p>
+  <p class="large-text">Этот параграф имеет класс .large-text — его шрифт увеличен.</p>
+  <p class="highlight large-text">Этот параграф имеет оба класса одновременно.</p>
+
+  <!-- ID-селектор -->
+  <h2>ID-селектор</h2>
+  <div id="special-box">
+    Блок с id="special-box" — стилизован через #special-box.
+  </div>
+
+  <!-- Универсальный селектор -->
+  <h2>Универсальный селектор</h2>
+  <p>Селектор <code>*</code> применяет стили ко всем элементам на странице (сброс отступов).</p>
+
+  <!-- Комбинаторы -->
+  <h2>Комбинаторы</h2>
+
+  <h3>Дочерний селектор (child &gt;)</h3>
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <h3>Соседний селектор (adjacent +)</h3>
+  <p>Соседний селектор <code>h2 + p</code> стилизует только первый параграф после заголовка h2.</p>
+  <p>Этот второй параграф после h2+ уже не попадает под селектор adjacent.</p>
+
+  <h3>Общий sibling (~)</h3>
+  <div class="sibling-demo">
+    <p>Первый sibling — стилизован через h3 ~ p</p>
+    <p>Второй sibling — тоже стилизован через h3 ~ p</p>
+    <span>Это span, не受到影响</span>
+    <p>Третий sibling — стилизован через h3 ~ p</p>
+  </div>
+
+  <!-- Атрибутные селекторы -->
+  <h2>Атрибутные селекторы</h2>
+
+  <form>
+    <input type="text" placeholder="Текстовое поле — input[type=&quot;text&quot;]">
+    <input type="password" placeholder="Пароль">
+    <input type="email" placeholder="Email">
+    <input type="submit" value="Отправить">
+  </form>
+
+  <p>
+    <a href="https://example.com">Ссылка на example.com (https^)</a> |
+    <a href="http://example.com">Ссылка на http://</a> |
+    <a href="mailto:test@test.com">Email-ссылка</a>
+  </p>
+
+  <!-- Специфичность -->
+  <h2>Специфичность (Specificity)</h2>
+  <p class="specificity-demo">Этот параграф стилизован классом .specificity-demo.</p>
+  <p id="specificity-top" class="specificity-demo">Этот параграф стилизован и классом, и ID — ID побеждает.</p>
+
+</body>
+</html>

@@ -1,0 +1,417 @@
+/* ============================================
+   Урок 6 — Flexbox продвинутый + CSS Grid
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 30px 0 15px;
+    color: #2c3e50;
+}
+
+h3 {
+    margin: 12px 0 8px;
+    color: #555;
+    font-size: 1rem;
+}
+
+section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Общие стили для Flex-контейнеров --- */
+.flex-container {
+    display: flex;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+
+/* --- 1. Flex Grow --- */
+.grow-demo {
+    gap: 10px;
+}
+
+.grow-item {
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    background: #95a5a6;
+}
+
+.grow-1 {
+    flex-grow: 1;
+    background: #3498db;
+}
+
+.grow-2 {
+    flex-grow: 2;
+    background: #e74c3c;
+}
+
+.grow-3 {
+    flex-grow: 3;
+    background: #2ecc71;
+}
+
+/* --- 2. Flex Shrink --- */
+.shrink-demo {
+    gap: 10px;
+    width: 500px;
+}
+
+.shrink-item {
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    background: #95a5a6;
+    width: 250px;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+    background: #3498db;
+}
+
+.shrink-1 {
+    flex-shrink: 1;
+    background: #e67e22;
+}
+
+.shrink-2 {
+    flex-shrink: 2;
+    background: #e74c3c;
+}
+
+/* --- 3. Flex Basis и Shorthand --- */
+.basis-demo {
+    gap: 10px;
+}
+
+.basis-item {
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    background: #95a5a6;
+}
+
+.basis-200 {
+    flex-basis: 200px;
+    background: #9b59b6;
+}
+
+.basis-auto {
+    flex-basis: auto;
+    background: #3498db;
+}
+
+.basis-100 {
+    flex-basis: 100px;
+    background: #2ecc71;
+}
+
+.shorthand-demo {
+    gap: 10px;
+}
+
+.shorthand-item {
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.shorthand-1 {
+    flex: 1;
+    background: #3498db;
+}
+
+.shorthand-2 {
+    flex: 2;
+    background: #e74c3c;
+}
+
+.shorthand-3 {
+    flex: 1 0 150px;
+    background: #2ecc71;
+}
+
+/* --- 4. Align Self --- */
+.alignSelf-demo {
+    gap: 10px;
+    height: 250px;
+    align-items: stretch;
+}
+
+.self-item {
+    background: #95a5a6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.self-start {
+    align-self: flex-start;
+    background: #3498db;
+}
+
+.self-center {
+    align-self: center;
+    background: #e74c3c;
+}
+
+.self-end {
+    align-self: flex-end;
+    background: #2ecc71;
+}
+
+.self-stretch {
+    align-self: stretch;
+    background: #f39c12;
+}
+
+/* --- 5. Order --- */
+.order-demo {
+    gap: 10px;
+}
+
+.order-item {
+    background: #95a5a6;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.order-3 {
+    order: 3;
+    background: #e74c3c;
+}
+
+.order-1 {
+    order: 1;
+    background: #3498db;
+}
+
+.order-default {
+    background: #95a5a6;
+}
+
+.order-2 {
+    order: 2;
+    background: #2ecc71;
+}
+
+/* --- 6. Grid Gallery --- */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    background: #9b59b6;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* --- 7. Grid Gap --- */
+.grid-gap-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.gap-item {
+    background: #1abc9c;
+    color: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- 8. Grid Layout с fr --- */
+.grid-layout-demo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.layout-item {
+    padding: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.layout-sidebar {
+    background: #e67e22;
+}
+
+.layout-main {
+    background: #3498db;
+}
+
+.grid-three-demo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+}
+
+.grid-three-demo .layout-item:nth-child(1) {
+    background: #e74c3c;
+}
+
+.grid-three-demo .layout-item:nth-child(2) {
+    background: #2ecc71;
+}
+
+.grid-three-demo .layout-item:nth-child(3) {
+    background: #9b59b6;
+}
+
+/* --- 9. Комбинированная верстка --- */
+.page-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    min-height: 500px;
+}
+
+.page-header {
+    grid-area: header;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.page-sidebar {
+    grid-area: sidebar;
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page-sidebar h4 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-list li {
+    padding: 10px 15px;
+    background: #2c3e50;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar-list li:hover {
+    background: #3498db;
+}
+
+.page-content {
+    grid-area: content;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.page-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.page-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.content-cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.content-card {
+    flex: 1 1 150px;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.page-footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
